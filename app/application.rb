@@ -7,6 +7,7 @@ class Application
 
     if req.path.match(/songs/)
       item = req.path.split(/songs/).last
+      binding.pry
       if @@items.include?(item)
         resp.write "#{item.price}"
       else
