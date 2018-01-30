@@ -7,6 +7,7 @@ class application
     if req.path.match(/songs/)
 
     else
+      resp.write "Route not found"
       resp.status = 404
 
     req.finish
