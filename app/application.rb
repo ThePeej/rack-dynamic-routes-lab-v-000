@@ -18,6 +18,6 @@ class Application
       resp.status = 404
     end
 
-    req.finish
+    resp.finish
   end
 end
