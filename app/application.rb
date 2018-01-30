@@ -9,7 +9,7 @@ class Application
     if req.path.match(/items/)
       item = req.path.split("/items/").last
       # binding.pry
-      if @@items.any?{}|i|i.name == item}
+      if @@items.any?{|i|i.name == item}
         resp.write "#{item.price}"
       else
         resp.write "Item not found"
