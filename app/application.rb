@@ -5,6 +5,8 @@ class application
     req = Rack.request.new(env)
 
     if req.path.match(/songs/)
+      item = req.path.split(/songs/).last
+      
 
     else
       resp.write "Route not found"
