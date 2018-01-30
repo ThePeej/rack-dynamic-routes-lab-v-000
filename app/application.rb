@@ -10,7 +10,8 @@ class Application
       item = req.path.split("/items/").last
       # binding.pry
       if @@items.any?{|i|i.name == item}
-        resp.write "#{item.price}"
+        i = @@items.detect{|i|i.name == item}
+        resp.write "#{i.price}"
       else
         resp.write "Item not found"
         resp.status = 400
